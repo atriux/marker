@@ -1,0 +1,190 @@
+/* post-highlighter.css */
+
+/* The Modal (background) */
+.highlighter-modal {
+	display: none; /* Hidden by default */
+	position: fixed; /* Stay in place */
+	z-index: 999; /* Sit on top */
+	left: 0;
+	top: 0;
+	width: 100%; /* Full width */
+	height: 100%; /* Full height */
+	overflow: auto; /* Enable scroll if needed */
+	background-color: rgb(0,0,0); /* Fallback color */
+	background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.highlighter-modal-content {
+	background-color: #fefefe;
+	margin: 15% auto; /* 15% from the top and centered */
+
+	border: 1px solid #888;
+	width: 50%; /* Could be more or less, depending on screen size */
+	min-width: 300px;
+}
+
+.highlighter-modal-content .highlighter-modal-header {
+	padding: 15px 20px;
+	border-bottom: 1px solid #e9ecef;
+}
+.highlighter-modal-content .highlighter-modal-header h3{
+	margin:0;
+}
+
+
+/* The Close Button */
+.highlighter-modal-close {
+	color: #aaa;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
+	line-height: 32px;
+}
+
+.highlighter-modal-close:hover,
+.highlighter-modal-close:focus {
+	color: black;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+
+.highlighter-modal-content .highlighter-modal-inner-content {
+	padding: 15px 20px;
+}
+.highlighter-modal-content .highlighter-modal-inner-content p{
+	margin:0;
+}
+.highlighter-modal-content .highlighter-modal-inner-content p.warning {
+	font-style: italic;
+	margin-top: 10px;
+}
+.highlighter-modal-content .highlighter-modal-footer {
+	padding: 20px;
+	text-align: center;
+	border-top: 1px solid #e9ecef;
+}
+.highlighter-modal-content .highlighter-button{
+	color: #fff;
+	padding: .5rem;
+	border-style: solid;
+	border-width: 1px;
+	border-radius: 5px;
+	font-size: 1rem;
+	display: inline-block;
+	cursor: pointer;
+}
+.highlighter-modal-content .highlighter-button:hover{
+	text-decoration: none
+}
+.highlighter-modal-content .highlighter-success{
+	background-color: #28a745;
+	border-color: #28a745;
+}
+.highlighter-modal-content .highlighter-danger{
+	background-color: #d9534f;
+	border-color:#d9534f;
+}
+.highlighter-success-message p{
+	background-color: #5cb85c;
+	border: 1px solid #5cb85c;
+	border-radius: 5px;
+	padding: 5px;
+	color: #FFF;
+	margin-bottom: 1rem;
+}
+body.highlighter-opened{
+	overflow:hidden;
+}
+
+
+
+/** User added paragraphs **/
+#posthighlighter-highlightr-user .single-row,
+#posthighlighter-highlightr-top .single-row{
+	display: flex;
+}
+#posthighlighter-highlightr-user .single-row.heading-row > div,
+#posthighlighter-highlightr-top .single-row.heading-row > div{
+	font-weight:bold;
+	text-align:center;
+}
+#posthighlighter-highlightr-user .single-row > div,
+#posthighlighter-highlightr-top .single-row > div{
+	border: 1px solid #000;
+	border-right: none;
+	border-bottom: none;
+	padding:5px 10px;
+}
+#posthighlighter-highlightr-user .single-row .highlighter-paragraph{
+	width:40%;
+}
+#posthighlighter-highlightr-user .single-row .highlighter-post,
+#posthighlighter-highlightr-top .single-row .highlighter-post{
+	width:20%;
+}
+#posthighlighter-highlightr-top .single-row .highlighter-paragraph{
+	width:80%;
+}
+#posthighlighter-highlightr-user .single-row .highlighter-added-on{
+	width:20%;
+}
+#posthighlighter-highlightr-user .single-row .highlighter-action{
+	width:20%;
+	display: flex;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+	align-content: flex-start;
+}
+#posthighlighter-highlightr-user .tabular-design,
+#posthighlighter-highlightr-top .tabular-design{
+	border-right: 1px solid black;
+	border-bottom: 1px solid black;
+	border-radius: 5px;
+}
+#posthighlighter-highlightr-user .single-row:first-child > div:first-child,
+#posthighlighter-highlightr-top .single-row:first-child > div:first-child{
+	border-top-left-radius: 5px;
+}
+#posthighlighter-highlightr-user .single-row:last-child > div:first-child,
+#posthighlighter-highlightr-top .single-row:last-child > div:first-child{
+	border-bottom-left-radius: 5px;
+}
+#posthighlighter-highlightr-user .single-row:first-child > div:last-child,
+#posthighlighter-highlightr-top .single-row:first-child > div:last-child{
+	border-top-right-radius: 5px;
+}
+#posthighlighter-highlightr-user a.paragraph-action{
+	text-decoration: none;
+	min-width: 30px;
+	text-align: center;
+}
+/** Highlighter pagination **/
+.highlighter-pagination {
+	display: flex;
+	justify-content: center;
+	margin: 10px 0;
+}
+.highlighter-pagination a:hover {
+	text-decoration: none;
+	color: #000;
+}
+.highlighter-pagination a {
+	color: black;
+	padding: 8px 16px;
+	text-decoration: none;
+	transition: background-color .3s;
+	border: 1px solid #ddd;
+}
+.highlighter-pagination a.disabled{
+	background-color: #e9ecef;
+	cursor: not-allowed;
+	border-color: #e9ecef;
+}
+.paragraph-share-social{
+	width: 250px;
+	display: flex;
+	justify-content: space-between;
+	margin: 20px 0;
+}
