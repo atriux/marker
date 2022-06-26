@@ -5,6 +5,12 @@
 		</div>
 	<?php endif; ?>
 	<div>
+		<?php
+		if( !is_user_logged_in() ){
+			echo '<p class="warning">Paragraph are saved temporarily. Log in to avoid losing it.</p>';
+		}
+		PostHighlighter\Helpers::get_button_saving();
+		?>
 		<div class="tabular-design">
 			<div class="single-row heading-row">
 				<div class="highlighter-paragraph">
@@ -55,7 +61,6 @@
 					</div>
 				</div>
 			<?php endforeach; ?>
-
 		</div>
 		<?php if( $previous_link || $next_link ): ?>
 			<div class="highlighter-pagination">

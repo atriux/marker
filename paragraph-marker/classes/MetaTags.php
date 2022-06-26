@@ -32,7 +32,6 @@ class MetaTags{
 			echo '<meta name="description" property="og:description" content="'.$des_post.'">' . "\n";
 			echo "<meta property='og:title' content='$post_title'/>" . "\n";
 			echo "<meta property='og:url' content='$post_link'/>" . "\n";
-			
 		}
 	}
 }

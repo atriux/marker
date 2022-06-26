@@ -1,6 +1,5 @@
 <?php
 namespace PostHighlighter;
-
 class PostParagraph{
 	public function __construct(){
 		add_action( 'init', [$this,'create_post_paragraph'] );// Regsiter custom post type	
@@ -14,10 +13,8 @@ class PostParagraph{
 			if( $post_paragraph && ( $post_paragraph_link = get_permalink($post_paragraph) ) )
 				return $content . " Click <a href='$post_paragraph_link' target='_blank'>here</a> to go to main post.";
 		}
-
 		return $content ;
 	}
-
 	/** Create custom post **/
 	public function create_post_paragraph(){
 		register_post_type( 'post-paragraph',
@@ -29,11 +26,18 @@ class PostParagraph{
 				'public' => true,
 				'has_archive' => true,
 				'show_in_rest' => true,
-				'supports'	=>	['title','editor','excerpt']
+				'supports'	=>	['title','editor','excerpt','thumbnail'],
+				'capability_type' => 'post',
+				  'capabilities' => array(
+				    'create_posts' => false, // Removes support for the "Add New" function ( use 'do_not_allow' instead of false for multisite set ups )
+				  ),
+				  'map_meta_cap' => true
 			)
 		);
+		register_taxonomy( 'post-paragraph-tag', array( 'post-paragraph' ) , [
+			'show_in_rest'	=>	true
+		] );
 	}
-
 	/** Add sub menu under custom post type **/
 	public function register_custom_submenu(){
 		/** Save by popularity **/
@@ -55,11 +59,9 @@ class PostParagraph{
 			[$this,'all_saves']
 		);
 	}
-
 	public function saves_by_popularity(){
 		include(POST_HIGHLIGHTER_PATH . "template/saves-by-popularity.php");
 	}
-
 	public function all_saves(){
 		include(POST_HIGHLIGHTER_PATH . "template/all-saves.php");
 	}

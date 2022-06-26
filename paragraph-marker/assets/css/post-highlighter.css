@@ -1,5 +1,4 @@
 /* post-highlighter.css */
-
 /* The Modal (background) */
 .highlighter-modal {
 	display: none; /* Hidden by default */
@@ -13,17 +12,14 @@
 	background-color: rgb(0,0,0); /* Fallback color */
 	background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
-
 /* Modal Content/Box */
 .highlighter-modal-content {
 	background-color: #fefefe;
-	margin: 15% auto; /* 15% from the top and centered */
-
+	margin: 75px auto; /* 15% from the top and centered */
 	border: 1px solid #888;
-	width: 50%; /* Could be more or less, depending on screen size */
+	width: 75%; /* Could be more or less, depending on screen size */
 	min-width: 300px;
 }
-
 .highlighter-modal-content .highlighter-modal-header {
 	padding: 15px 20px;
 	border-bottom: 1px solid #e9ecef;
@@ -31,8 +27,6 @@
 .highlighter-modal-content .highlighter-modal-header h3{
 	margin:0;
 }
-
-
 /* The Close Button */
 .highlighter-modal-close {
 	color: #aaa;
@@ -41,15 +35,12 @@
 	font-weight: bold;
 	line-height: 32px;
 }
-
 .highlighter-modal-close:hover,
 .highlighter-modal-close:focus {
 	color: black;
 	text-decoration: none;
 	cursor: pointer;
 }
-
-
 .highlighter-modal-content .highlighter-modal-inner-content {
 	padding: 15px 20px;
 }
@@ -65,24 +56,28 @@
 	text-align: center;
 	border-top: 1px solid #e9ecef;
 }
-.highlighter-modal-content .highlighter-button{
+.highlighter-button{
 	color: #fff;
-	padding: .5rem;
+	padding: 0 .5rem;
 	border-style: solid;
 	border-width: 1px;
 	border-radius: 5px;
-	font-size: 1rem;
+	font-size: 1.5rem;
 	display: inline-block;
 	cursor: pointer;
 }
-.highlighter-modal-content .highlighter-button:hover{
+.highlighter-button:hover{
 	text-decoration: none
 }
-.highlighter-modal-content .highlighter-success{
+.highlighter-success{
 	background-color: #28a745;
 	border-color: #28a745;
 }
-.highlighter-modal-content .highlighter-danger{
+.highlighter-info{
+	background-color: #5bc0de;
+	border-color: #5bc0de;
+}
+.highlighter-danger{
 	background-color: #d9534f;
 	border-color:#d9534f;
 }
@@ -97,9 +92,6 @@
 body.highlighter-opened{
 	overflow:hidden;
 }
-
-
-
 /** User added paragraphs **/
 #posthighlighter-highlightr-user .single-row,
 #posthighlighter-highlightr-top .single-row{
@@ -186,5 +178,5 @@ body.highlighter-opened{
 	width: 250px;
 	display: flex;
 	justify-content: space-between;
-	margin: 20px 0;
+	margin: 20px auto;
 }

@@ -29,6 +29,9 @@ include( "classes/SettingOptions.php");//Settings Option
 include("classes/SavesByPopularity.php");//Save by popularity
 include("classes/AllSaves.php");//All Saves
 include("classes/MetaTags.php");//Add meta tags for saved paragraphs
-include("classes/Helpers.php");
 
+include("classes/TopHighlightedParagraphWidget.php");//Widgets - to show get top paragraphs
+include("classes/ChartWidgets.php");//Widgets - to show information of saved paragraphs
+
+include("classes/Helpers.php");
 register_activation_hook( __FILE__, ['PostHighlighter\PluginActive','CreateTables'] );

@@ -30,7 +30,6 @@
 						
 						echo "({$single_paragraph->counter})";
 						?>
-
 					</div>
 				</div>
 			<?php endforeach; ?>
